@@ -1,0 +1,149 @@
+[training@localhost ~]$ sqoop import --connect jdbc:mysql://localhost/myproject --username training --password training --table clickstream -m1
+23/07/21 18:25:03 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/07/21 18:25:03 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+23/07/21 18:25:03 INFO tool.CodeGenTool: Beginning code generation
+23/07/21 18:25:05 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `clickstream` AS t LIMIT 1
+23/07/21 18:25:05 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `clickstream` AS t LIMIT 1
+23/07/21 18:25:06 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/ec6efa663da3479211027627774ae48f/clickstream.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/07/21 18:25:15 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/ec6efa663da3479211027627774ae48f/clickstream.jar
+23/07/21 18:25:15 WARN manager.MySQLManager: It looks like you are importing from mysql.
+23/07/21 18:25:15 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+23/07/21 18:25:15 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+23/07/21 18:25:15 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+23/07/21 18:25:15 INFO mapreduce.ImportJobBase: Beginning import of clickstream
+23/07/21 18:25:33 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/07/21 18:25:40 INFO mapred.JobClient: Running job: job_202307211735_0001
+23/07/21 18:25:41 INFO mapred.JobClient:  map 0% reduce 0%
+23/07/21 18:26:41 INFO mapred.JobClient:  map 100% reduce 0%
+23/07/21 18:27:04 INFO mapred.JobClient: Job complete: job_202307211735_0001
+23/07/21 18:27:04 INFO mapred.JobClient: Counters: 23
+23/07/21 18:27:04 INFO mapred.JobClient:   File System Counters
+23/07/21 18:27:04 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/07/21 18:27:04 INFO mapred.JobClient:     FILE: Number of bytes written=198692
+23/07/21 18:27:04 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/07/21 18:27:04 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/07/21 18:27:04 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/07/21 18:27:04 INFO mapred.JobClient:     HDFS: Number of bytes read=87
+23/07/21 18:27:04 INFO mapred.JobClient:     HDFS: Number of bytes written=465
+23/07/21 18:27:04 INFO mapred.JobClient:     HDFS: Number of read operations=1
+23/07/21 18:27:04 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/07/21 18:27:04 INFO mapred.JobClient:     HDFS: Number of write operations=1
+23/07/21 18:27:04 INFO mapred.JobClient:   Job Counters 
+23/07/21 18:27:04 INFO mapred.JobClient:     Launched map tasks=1
+23/07/21 18:27:04 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=66277
+23/07/21 18:27:04 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/07/21 18:27:04 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/07/21 18:27:04 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/07/21 18:27:04 INFO mapred.JobClient:   Map-Reduce Framework
+23/07/21 18:27:04 INFO mapred.JobClient:     Map input records=13
+23/07/21 18:27:04 INFO mapred.JobClient:     Map output records=13
+23/07/21 18:27:04 INFO mapred.JobClient:     Input split bytes=87
+23/07/21 18:27:04 INFO mapred.JobClient:     Spilled Records=0
+23/07/21 18:27:04 INFO mapred.JobClient:     CPU time spent (ms)=6020
+23/07/21 18:27:04 INFO mapred.JobClient:     Physical memory (bytes) snapshot=85196800
+23/07/21 18:27:04 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=402022400
+23/07/21 18:27:04 INFO mapred.JobClient:     Total committed heap usage (bytes)=63700992
+23/07/21 18:27:04 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 106.8927 seconds (0 bytes/sec)
+23/07/21 18:27:04 INFO mapreduce.ImportJobBase: Retrieved 13 records.
+[training@localhost ~]$ sqoop import --connect jdbc:mysql://localhost/myproject --username training --password training --table customer -m1
+23/07/21 18:27:24 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/07/21 18:27:24 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+23/07/21 18:27:24 INFO tool.CodeGenTool: Beginning code generation
+23/07/21 18:27:26 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `customer` AS t LIMIT 1
+23/07/21 18:27:26 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `customer` AS t LIMIT 1
+23/07/21 18:27:26 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/c465262c779c332466bebe4acc4515fa/customer.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/07/21 18:27:34 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/c465262c779c332466bebe4acc4515fa/customer.jar
+23/07/21 18:27:34 WARN manager.MySQLManager: It looks like you are importing from mysql.
+23/07/21 18:27:34 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+23/07/21 18:27:34 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+23/07/21 18:27:34 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+23/07/21 18:27:34 INFO mapreduce.ImportJobBase: Beginning import of customer
+23/07/21 18:27:50 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/07/21 18:27:56 INFO mapred.JobClient: Running job: job_202307211735_0002
+23/07/21 18:27:57 INFO mapred.JobClient:  map 0% reduce 0%
+23/07/21 18:28:45 INFO mapred.JobClient:  map 100% reduce 0%
+23/07/21 18:29:10 INFO mapred.JobClient: Job complete: job_202307211735_0002
+23/07/21 18:29:10 INFO mapred.JobClient: Counters: 23
+23/07/21 18:29:10 INFO mapred.JobClient:   File System Counters
+23/07/21 18:29:10 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/07/21 18:29:10 INFO mapred.JobClient:     FILE: Number of bytes written=198678
+23/07/21 18:29:10 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/07/21 18:29:10 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/07/21 18:29:10 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/07/21 18:29:10 INFO mapred.JobClient:     HDFS: Number of bytes read=87
+23/07/21 18:29:10 INFO mapred.JobClient:     HDFS: Number of bytes written=392
+23/07/21 18:29:10 INFO mapred.JobClient:     HDFS: Number of read operations=1
+23/07/21 18:29:10 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/07/21 18:29:10 INFO mapred.JobClient:     HDFS: Number of write operations=1
+23/07/21 18:29:10 INFO mapred.JobClient:   Job Counters 
+23/07/21 18:29:10 INFO mapred.JobClient:     Launched map tasks=1
+23/07/21 18:29:10 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=71162
+23/07/21 18:29:10 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/07/21 18:29:10 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/07/21 18:29:10 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/07/21 18:29:10 INFO mapred.JobClient:   Map-Reduce Framework
+23/07/21 18:29:10 INFO mapred.JobClient:     Map input records=10
+23/07/21 18:29:11 INFO mapred.JobClient:     Map output records=10
+23/07/21 18:29:11 INFO mapred.JobClient:     Input split bytes=87
+23/07/21 18:29:11 INFO mapred.JobClient:     Spilled Records=0
+23/07/21 18:29:11 INFO mapred.JobClient:     CPU time spent (ms)=4940
+23/07/21 18:29:11 INFO mapred.JobClient:     Physical memory (bytes) snapshot=83849216
+23/07/21 18:29:11 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=401670144
+23/07/21 18:29:11 INFO mapred.JobClient:     Total committed heap usage (bytes)=63700992
+23/07/21 18:29:11 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 94.5011 seconds (0 bytes/sec)
+23/07/21 18:29:11 INFO mapreduce.ImportJobBase: Retrieved 10 records.
+[training@localhost ~]$ sqoop import --connect jdbc:mysql://localhost/myproject --username training --password training --table purchase -m1
+23/07/21 18:31:26 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/07/21 18:31:26 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+23/07/21 18:31:26 INFO tool.CodeGenTool: Beginning code generation
+23/07/21 18:31:27 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `purchase` AS t LIMIT 1
+23/07/21 18:31:27 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `purchase` AS t LIMIT 1
+23/07/21 18:31:27 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/7202f965ee8c4ddfa2ab9d18864061b8/purchase.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/07/21 18:31:34 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/7202f965ee8c4ddfa2ab9d18864061b8/purchase.jar
+23/07/21 18:31:34 WARN manager.MySQLManager: It looks like you are importing from mysql.
+23/07/21 18:31:34 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+23/07/21 18:31:34 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+23/07/21 18:31:34 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+23/07/21 18:31:34 INFO mapreduce.ImportJobBase: Beginning import of purchase
+23/07/21 18:31:51 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/07/21 18:31:56 INFO mapred.JobClient: Running job: job_202307211735_0003
+23/07/21 18:31:57 INFO mapred.JobClient:  map 0% reduce 0%
+23/07/21 18:32:41 INFO mapred.JobClient:  map 100% reduce 0%
+23/07/21 18:33:04 INFO mapred.JobClient: Job complete: job_202307211735_0003
+23/07/21 18:33:04 INFO mapred.JobClient: Counters: 23
+23/07/21 18:33:04 INFO mapred.JobClient:   File System Counters
+23/07/21 18:33:04 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/07/21 18:33:04 INFO mapred.JobClient:     FILE: Number of bytes written=198679
+23/07/21 18:33:04 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/07/21 18:33:04 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/07/21 18:33:04 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/07/21 18:33:04 INFO mapred.JobClient:     HDFS: Number of bytes read=87
+23/07/21 18:33:04 INFO mapred.JobClient:     HDFS: Number of bytes written=139
+23/07/21 18:33:04 INFO mapred.JobClient:     HDFS: Number of read operations=1
+23/07/21 18:33:04 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/07/21 18:33:04 INFO mapred.JobClient:     HDFS: Number of write operations=1
+23/07/21 18:33:04 INFO mapred.JobClient:   Job Counters 
+23/07/21 18:33:04 INFO mapred.JobClient:     Launched map tasks=1
+23/07/21 18:33:04 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=64908
+23/07/21 18:33:04 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/07/21 18:33:04 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/07/21 18:33:04 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/07/21 18:33:04 INFO mapred.JobClient:   Map-Reduce Framework
+23/07/21 18:33:04 INFO mapred.JobClient:     Map input records=5
+23/07/21 18:33:04 INFO mapred.JobClient:     Map output records=5
+23/07/21 18:33:04 INFO mapred.JobClient:     Input split bytes=87
+23/07/21 18:33:04 INFO mapred.JobClient:     Spilled Records=0
+23/07/21 18:33:04 INFO mapred.JobClient:     CPU time spent (ms)=5640
+23/07/21 18:33:04 INFO mapred.JobClient:     Physical memory (bytes) snapshot=83718144
+23/07/21 18:33:04 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=401682432
+23/07/21 18:33:04 INFO mapred.JobClient:     Total committed heap usage (bytes)=63700992
+23/07/21 18:33:04 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 87.8356 seconds (0 bytes/sec)
+23/07/21 18:33:04 INFO mapreduce.ImportJobBase: Retrieved 5 records.
+[training@localhost ~]$ 
+
